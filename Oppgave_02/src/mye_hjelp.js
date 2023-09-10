@@ -1,11 +1,11 @@
-import './styles.css';
-import { users } from './util';
+import "./styles.css";
+import { users } from "./util";
 
 // TODO: Hent HTML #id med getElementById
-const searchInput = '';
-const filterInput = '';
-const filterButton = '';
-const userUl = '';
+const searchInput = document.getElementById("name");
+const filterInput = document.getElementById("age");
+const filterButton = document.getElementById("filter");
+const userUl = document.getElementById("users");
 
 const createTableUI = (users) => {
   userUl.innerHTML = null;
@@ -17,10 +17,10 @@ const createTableUI = (users) => {
 
 const handleSearch = () => {
   // TODO: Hent ut verdien fra søke input feltet
-  const searchName = '';
+  const searchName = "";
   if (searchName) {
     // Bruk .find for å finne navnet til den brukeren som matcher søkeordet
-    const searchResult = '';
+    const searchResult = "";
     if (searchResult) {
       // TODO: Oppdatere grensesnittet med createTableUI og resultatet av søket
     } else {
@@ -33,10 +33,10 @@ const handleSearch = () => {
 
 const handleFilter = () => {
   // TODO: Hent ut verdien fra filter input feltet
-  const filterValue = '';
+  const filterValue = "";
   if (filterValue && Number(filterValue)) {
     // TODO: Bruk .filter for å hente ut de brukeren  som har en alder høyere en filterverdien
-    const filterResult = '';
+    const filterResult = "";
     if (filterResult && filterResult.length > 0) {
       // TODO: Oppdatere grensesnittet med createTableUI og resultatet av filteret
     } else {
@@ -53,5 +53,5 @@ const main = () => {
 
 main();
 
-searchInput.addEventListener('keyup', handleSearch);
-filterButton.addEventListener('click', handleFilter);
+searchInput.addEventListener("keyup", handleSearch);
+filterButton.addEventListener("click", handleFilter);
